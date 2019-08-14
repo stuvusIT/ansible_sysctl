@@ -1,0 +1,9 @@
+---
+- name: Template sysctl config
+  template:
+    src: sysctl.conf.j2
+    dest: "/etc/sysctl.d/{{ sysctl_number }}-ansible.conf"
+    owner: root
+    group: root
+    mode: 0644
+  notify: Restart systemd-sysctl
