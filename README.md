@@ -3,7 +3,7 @@
 This role configures sysctl values and restarts `systemd-sysctl` afterwards to apply them.
 The file the sysctl values is written to is called `XX-ansible.conf` where `XX` is a configurable number (default: `10`).
 This allows to set the priority of the file if other packages/modules also place sysctl configurations to `/etc/sysctl.d`.
-Not that when changing the value, the old file is not automatically removed.
+Note that when changing the value, the old file is not automatically removed.
 
 ## Requirements
 
