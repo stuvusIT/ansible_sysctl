@@ -1,0 +1,22 @@
+galaxy_info:
+  author: Janne Heß
+  description: Configure sysctl values
+  company: stuvus (https://stuvus.uni-stuttgart.de)
+
+  license: CC-BY-SA
+
+  min_ansible_version: 2.7
+
+  platforms:
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+
+  galaxy_tags:
+    - sysctl
+    - system
+    - systemd
+    - kernel
+
+dependencies: []
