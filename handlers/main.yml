@@ -3,3 +3,8 @@
   systemd:
     name: systemd-sysctl
     state: restarted
+
+- name: Restart sysfsutils
+  systemd:
+    name: sysfsutils
+    state: restarted

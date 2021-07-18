@@ -15,6 +15,7 @@ galaxy_info:
 
   galaxy_tags:
     - sysctl
+    - sysfs
     - system
     - systemd
     - kernel

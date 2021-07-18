@@ -1,0 +1,4 @@
+# {{ ansible_managed }}
+{% for key,value in sysfs.items() %}
+{{ key }} = {{ value }}
+{% endfor %}
