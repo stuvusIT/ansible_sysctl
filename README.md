@@ -2,18 +2,21 @@
 
 This role can configure sysctl values (`/proc/sys`) and sysfs values (`/sys`).
 
-## Sysctl values
+## Sysctl Values
+
 The role configures sysctl values (under `/etc/sysctl.d/`) and restarts `systemd-sysctl` afterwards to apply them.
 The file the sysctl values is written to is called `XX-ansible.conf` where `XX` is a configurable number (default: `10`).
 This allows to set the priority of the file if other packages/modules also place sysctl configurations to `/etc/sysctl.d/`.
 Note that when changing the value, the old file is not automatically removed.
 
-## Sysfs values
+## Sysfs Values
+
 The role installes the `sysfsutils` package and uses its `/etc/sysfs.d/` directory to configure persistent sysfs values.
 Then it applies these values by restarting the `sysfsutils` service.
 The file the sysctl values is written to is called `XX-ansible.conf` where `XX` is a configurable number (default: `10`).
 This allows to set the priority of the file if other packages/modules also place sysctl configurations to `/etc/sysfs.d/`.
 Note that when changing the value, the old file is not automatically removed.
+
 ## Requirements
 
 Debian with systemd
