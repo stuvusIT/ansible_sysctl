@@ -1,3 +1,5 @@
 ---
 sysctl_number: 10
 sysctl: {}
+sysfs_number: 10
+sysfs: {}

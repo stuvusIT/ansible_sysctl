@@ -1,4 +1,9 @@
 ---
+- name: Install sysfsutils
+  apt:
+    name:
+      - sysfsutils
+
 - name: Template sysctl config
   template:
     src: sysctl.conf.j2
@@ -7,3 +12,12 @@
     group: root
     mode: 0644
   notify: Restart systemd-sysctl
+
+- name: Template sysfs config
+  template:
+    src: sysfs.conf.j2
+    dest: "/etc/sysfs.d/{{ sysfs_number }}-ansible.conf"
+    owner: root
+    group: root
+    mode: 0644
+  notify: Restart sysfsutils
